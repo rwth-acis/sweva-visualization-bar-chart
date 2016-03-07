@@ -1671,7 +1671,13 @@ return /******/ (function(modules) { // webpackBootstrap
                     })
                     .attr('class', 'bar')
                     .style('fill', function (d) {
-                            return self.barColor(d[1]);                       
+                            if(d.length == 3 && typeof d[2] === 'string'){
+                                return d[2];
+                            }
+                            else {
+                                return self.barColor(d[1]);   
+                            }
+                                                
                     })
                     .style('pointer-events', 'none')
                     .attr('x', function (d) { return self.x(d[0]); })
@@ -1709,7 +1715,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
                         this.svg.selectAll('.bar')
                             .style('fill', function (d) {
-                                return self.barColor(d[1]);
+                                if(d.length == 3 && typeof d[2] === 'string'){
+                                    return d[2];
+                                }
+                                else {
+                                  return self.barColor(d[1]);
+                                }
+                                
                             });
                         bar.style.fill = this.config.barHoverColor;
 
