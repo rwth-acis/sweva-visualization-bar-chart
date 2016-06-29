@@ -1,6 +1,6 @@
 ## sweva-visualization-bar-chart
 
-Bar Chart visualization module for the Collaborative Visualization Tool.
+Bar Chart visualization module for SWeVA.
 
 
 ## Dependencies
@@ -24,8 +24,10 @@ or
 ```sh
 gulp pack
 ```
-for minified files.
-
+for minified files. To produce both, run
+```sh
+gulp build
+```
 
 ## Playing With Your Element
 
